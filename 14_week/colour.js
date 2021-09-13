@@ -1,4 +1,4 @@
 function select(sender) {
-    console.log(sender)
+    debugger;
     sender.classList.add("colour");
 }
