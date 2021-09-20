@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gluten&family=Grechen+Fuemen&display=swap" rel="stylesheet">
+    <style>
+        .result {
+            height: 100vh;
+
+        }
+
+        .block {
+            display: flex;
+        }
+
+        .block__name {
+            margin: 10px;
+            text-align: center;
+            font-family: 'Grechen Fuemen', cursive;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(39, 88, 223);
+        }
+
+        .block__list {
+            width: 200px;
+            margin: 10px;
+            text-align: start;
+            font-family: 'Grechen Fuemen', cursive;
+            font-size: 30px;
+            border-radius: 10px;
+        }
+
+        .block__h1 {
+            font-family: 'Grechen Fuemen', cursive;
+            font-size: 40px;
+            color: rgb(193, 45, 230);
+
+        }
+    </style>
+
+
+</head>
+
+<body class="result" id="result">
+    <form class="block">
+        <div class="block__name">Выберите тему</div>
+        <select class="block__list" id="list" onchange=choice()>
+            <option value="White">White</option>
+            <option value="Pink">Pink</option>
+            <option value="Blue">Blue</option>
+            <option value="Violet">Violet</option>
+            <option value="Green">Green</option>
+
+        </select>
+    </form>
+    <div>
+        <h1 class="block__h1">Это мой веб-сайт</h1>
+    </div>
+    <script src="JS_list.js"></script>
+</body>
+
+</html>
