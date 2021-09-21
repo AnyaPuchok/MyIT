@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <style>
+        .register {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            width: 500px;
+            padding: 10px;
+            border-style: double;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 20px;
+            box-shadow: rgb(104, 172, 204) 10px 10px 10px;
+
+
+        }
+
+        .reg_form {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            align-items: center;
+        }
+
+
+        input {
+            width: 93%;
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+            padding: 5px;
+            margin: 3px;
+            font-size: 15px;
+            border-radius: 5px;
+            background: rgba(56, 55, 55, 0.07);
+        }
+
+
+        .header {
+            margin: 0 1px 20px;
+            border-bottom: 2px solid;
+            padding: 5px 10px 5px 0;
+            font-size: 30px;
+            text-align: center;
+        }
+
+
+
+        .errorMessage {
+            color: red;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .message {
+            color: rgb(60, 255, 0);
+            text-align: center;
+            margin: 10px;
+        }
+
+        .button {
+            width: 500px;
+            font-size: 20px;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 20px;
+            background: rgb(193, 231, 235);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="register">
+        <h3 class="header">Форма регистрации</h3>
+        <form class="reg_form" id="reg-form">
+            <label for="name">Имя</label>
+            <input type="text" id="name" />
+            <label for="email">Email</label>
+            <input type="text" id="email" />
+            <label for="username">Имя пользователя</label>
+            <input type="text" id="username" autocomplete="on" />
+            <label for="password">Пароль</label>
+            <input type="password" id="password" autocomplete="password" />
+            <label for="password-again">Повторить пароль</label>
+            <input type="password" id="password_again" autocomplete="on" />
+
+        </form>
+        <div class="errorMessage" id="errorMessage"></div>
+        <div>
+            <div class="message" id="message"></div>
+            <div>
+                <button id="create-account" class="button" type="button" onclick="check()">Регистрация</button>
+            </div>
+        </div>
+
+
+        <script src="form.js"></script>
+</body>
+
+</html>
