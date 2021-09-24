@@ -25,12 +25,12 @@ function check() {
             .innerHTML += "Имя пользователя незаполнено</br>";
     }
 
-    if (password.value == "") {
+    if (password.value == "" && password.value.length <= 5) {
         document.getElementById('errorMessage')
             .innerHTML += "Ваш пароль незаполнен</br>";
     }
 
-    if (password.value.length <= 5) {
+    else if (password.value.length <= 5) {
         document.getElementById('errorMessage')
             .innerHTML += "Ваш пароль слишком короткий</br>";
     }
