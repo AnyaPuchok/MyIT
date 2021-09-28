@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            width: 600px;
+            padding: 10px;
+            border-style: double;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 20px;
+            color: rgb(7, 7, 7);
+            box-shadow: rgb(126, 206, 157) 10px 10px 10px;
+        }
+
+        .marka {
+
+            margin: 10px;
+        }
+
+        .avto {
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        .vol {
+
+            margin: 10px;
+        }
+
+        .mark {
+            width: 300px;
+            font-size: 20px;
+        }
+
+        .volume {
+            width: 300px;
+            font-size: 20px;
+
+        }
+
+        .box {
+
+            margin: 10px;
+        }
+
+        .btn {
+            font-size: 20px;
+            margin: 20px;
+        }
+
+        .result1 {
+            text-align: center;
+            color: blue;
+        }
+
+        .result {
+            text-align: center;
+            color: rgb(255, 0, 0);
+        }
+    </style>
+
+<body>
+    <main class="form">
+        <h2>Калькулятор стоимости автомобиля</h2>
+        <div class="marka">
+            <select class="mark" id="mark">
+                <option class="markV" value="0">Выберите марку авто</option>
+                <option class="markV" value="100000">Ford</option>
+                <option class="markV" value="200000">Honda</option>
+                <option class="markV" value="300000">Mitsubishi</option>
+            </select>
+
+            <div id='container'></div>
+        </div>
+        <div class="vol">
+            <select class="volume" id="volume">
+                <option> Объём двигателя </option>
+                <option value="2000"> 1.6л </option>
+                <option value="3000"> 1.8л</option>
+                <option value="6000"> 2.0л </option>
+                <option value="8000"> 2.5л</option>
+            </select>
+        </div>
+        <div class="box" id="radio">
+            <p class="small">Коробка передач</p>
+            <p><input name="radio" type="radio" value="70000"> Автомат</p>
+            <p><input name="radio" type="radio" value="50000"> Механика</p>
+        </div>
+        <button class="btn" id="btn"> Расчитать </button>
+
+        <div class="result" id="result"></div>
+        <div class="result1" id="result1"></div>
+
+    </main>
+    <script src="priceAVTO.js"></script>
+
+</body>
+
+</html>
