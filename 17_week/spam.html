@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form {
+            display: block;
+            margin-right: auto;
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            border-style: double;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 20px;
+            background-color: rgb(208, 195, 236);
+            color: rgb(214, 13, 180);
+        }
+
+        .input {
+            width: 250px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        .btn {
+            height: 40px;
+            background-color: rgb(213, 240, 188);
+            font-size: 20px;
+        }
+
+        .result {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form">
+        <input class="input" type="text" name="text" placeholder="введите текст">
+        <p> <button class="btn" type="button">Проверить</button> </p>
+        <p> Проверка на спам:</p>
+        <p class="result"> </p>
+    </form>
+
+
+    <script src="spam.js"> </script>
+</body>
+
+</html>
