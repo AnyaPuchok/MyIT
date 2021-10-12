@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+
+    <style>
+        .form {
+            display: block;
+            margin-left: 100px;
+            width: 300px;
+            height: auto;
+            padding: 10px;
+            border-style: double;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            background-color: rgb(236, 200, 222);
+            color: rgb(3, 3, 15);
+
+        }
+
+        .input:valid {
+            border: 2px solid green;
+        }
+
+        .btn {
+            color: rgb(8, 10, 10);
+            background-color: rgb(194, 129, 224);
+            font-size: 15px;
+        }
+
+        input:valid {
+            border-color: green;
+        }
+
+        .select {
+            font-size: 15px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <h1 class="h1">Опрос для обладателей котов и кошек</h1>
+    <form class="form">
+        <div>
+            <label for="nickname">Кличка питомца</label><br>
+            <input class="input" type="text" id="nickname" required autofocus />*
+        </div>
+        <div>
+            <label for="name">Имя владельца питомца</label><br>
+            <input type="text" id="name" required autofocus />*
+        </div>
+        <div>
+            <label for="phone">Номер телефона </label><br>
+            <input type="tel" placeholder="+7(999)999-99-99"
+                pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required
+                autofocus />*
+        </div>
+        <p>Введите дату рождния питомца</p>
+        <p><input type="date" pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" required>*</p>
+        <div> Порода питомца</div>
+        <select class="select">
+            <option class="select"></option>
+            <option class="select">"Мейн-кун"</option>
+            <option class="select">"Сиамская"</option>
+            <option class="select">"Сибирская"</option>
+            <option class="select">"Корниш-рекс"</option>
+            <option class="select">"Персидская"</option>
+        </select>
+        <p>Чем питается питомец</p>
+        <span>
+            <input type="checkbox" />сухой корм
+        </span> <br />
+        <span>
+            <input type="checkbox" />влажный корм
+        </span> <br />
+        <span>
+            <input type="checkbox" />натуральный корм
+        </span>
+        <p>Пол питомца</p>
+        <div><input type="radio" name="sex" /> самец <br /> <input type="radio" name="sex" /> самка</div>
+        <p> Ваш комментарий:</p>
+        <div><textarea name="comments" id="comments" placeholder="Написать комментарий" cols="30" rows="10"></textarea>
+        </div>
+        <p>Загрузите фото вашего питомца</p>
+        <div>
+            <input type="file" name="file" />
+        </div>
+        <p> <button class="btn" type="submit">Сохранить</button> </p>
+
+    </form>
+</body>
+
+</html>
