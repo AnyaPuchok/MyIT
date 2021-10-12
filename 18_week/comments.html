@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form {
+            display: block;
+            margin-right: auto;
+            width: 300px;
+            height: auto;
+            padding: 10px;
+            border-style: double;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 20px;
+            background-color: rgb(192, 250, 245);
+            color: rgb(0, 0, 0);
+        }
+
+        .input {
+            width: 240px;
+            height: 20px;
+            font-size: 15px;
+
+        }
+
+        .btn {
+            height: 30px;
+            background-color: rgb(160, 215, 246);
+            font-size: 15px;
+        }
+
+        .btn2 {
+            height: 30px;
+            background-color: rgb(160, 215, 246);
+            font-size: 15px;
+        }
+
+        .result {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form">
+        <input class="input" type="text" id="name" placeholder="Ваше имя">
+        <p>
+            <button id="btn" class="btn" type="submit">Сохранить</button>
+            <button id="btn2" class="btn2" type="reset">Сбросить</button>
+        </p>
+        <textarea name="comments" id="comments" placeholder="Написать комментарий" cols="30" rows="10"></textarea>
+        <p> Ваш комментарий:</p>
+        <p class="result" id="result"> </p>
+    </form>
+
+
+    <script src="comments.js"> </script>
+</body>
+
+</html>
