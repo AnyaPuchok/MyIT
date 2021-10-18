@@ -23,12 +23,12 @@ document.querySelector('form').addEventListener('submit', (evt) => {
     let breed = document.querySelector('#breed').value;
 
     let food = [];
-    let feed = document.querySelectorAll('input[type="checkbox"]:checked'); 
+    let feed = document.querySelectorAll('input[type="checkbox"]:checked');
     for (let i = 0; i < feed.length; i++) {
         food.push(feed[i].value)
     }
 
-    let gender = document.querySelector('input[name="gender"]:checked')?.value; 
+    let gender = document.querySelector('input[name="gender"]:checked')?.value;
     let comments = document.querySelector('#comments').value;
 
     //console.log(nickname, ownersname, telephone, date, breed, gender)
