@@ -1,7 +1,7 @@
 document.getElementById("btn").addEventListener("click", function () {
         let numbers = [];
         for (let i = 0; i < 10; i++) 
-        numbers[i] = Math.round(Math.random() * 21 - 10);
+        numbers.push(Math.round(Math.random() * 21 - 10));
         document.getElementById("resalt").innerHTML= numbers.join("  ,")
        
         let sum = 0;
