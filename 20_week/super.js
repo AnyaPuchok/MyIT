@@ -70,18 +70,18 @@ inputs.forEach((range, index) => {
     })
 });
 
-function getLocalStorage() {
-  let newHeroes = JSON.parse(localStorage.getItem('heroes'));
-    heroes = newHeroes;
-};
+//function getLocalStorage() {
+//  let newHeroes = JSON.parse(localStorage.getItem('heroes'));
+ //   heroes = newHeroes;
+//};
  // код работает, но если есть запись в localStorage
  // почему так не понимаю. 
-//function getLocalStorage() {
- //  let newHeroes = JSON.parse(localStorage.getItem('heroes'));
-  //  if(!newHeroes){
-  //       heroes = newHeroes;
- //}
-//};
+function getLocalStorage() {
+   let newHeroes = JSON.parse(localStorage.getItem('heroes'));
+    if(newHeroes !== null){
+         heroes = newHeroes;
+ }
+};
 
 function setLocalStorage() {
     localStorage.setItem('heroes',JSON.stringify(heroes));
