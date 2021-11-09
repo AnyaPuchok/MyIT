@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+
+    <style>
+        .form {
+            display: block;
+            margin-left: 100px;
+            width: 300px;
+            height: auto;
+            padding: 10px;
+            border-style: double;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            background-color: rgb(215, 196, 231);
+            color: rgb(3, 3, 15);
+
+        }
+
+        .input:valid {
+            border: 2px solid green;
+        }
+
+        .btn {
+            color: rgb(8, 10, 10);
+            background-color: rgb(182, 195, 240);
+            font-size: 15px;
+            border-color: blue;
+        }
+
+        input:valid {
+            border-color: green;
+        }
+
+        .select {
+            font-size: 15px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <h1 class="h1">Опрос для обладателей котов и кошек</h1>
+    <form class="form" method="post" id="form">
+        <div>
+            <label for="nickname">Кличка питомца</label><br>
+            <input name="кличка питомца" class="input" type="text" id="nickname" required autofocus />*
+        </div>
+        <div>
+            <label for="name">Имя владельца питомца</label><br>
+            <input name="имя владельца" type="text" id="name" required autofocus />*
+        </div>
+        <div>
+            <label for="phone">Номер телефона </label><br>
+            <input name="телефон" type="tel" placeholder="+7(999)999-99-99"
+                pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required
+                autofocus />*
+        </div>
+        <p>Введите дату рождния питомца</p>
+        <p><input name="дата рождения питомца" type="date" pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}" required>*</p>
+        <div> Порода питомца</div>
+        <select class="select">
+            <option class="select"></option>
+            <option name="порода" class="select" value="Мейн-кун">"Мейн-кун"</option>
+            <option name="порода" class="select" value="Сиамская">"Сиамская"</option>
+            <option name="порода" class="select" value="Сибирская">"Сибирская"</option>
+            <option name="порода" class="select" value="Корниш-рекс">"Корниш-рекс"</option>
+            <option name="порода" class="select" value="Персидская">"Персидская"</option>
+        </select>
+        <p>Чем питается питомец</p>
+        <span>
+            <input name="питание" type="checkbox" value="сухой корм" />сухой корм
+        </span> <br />
+        <span>
+            <input name="питание" type="checkbox" value="влажный корм" />влажный корм
+        </span> <br />
+        <span>
+            <input name="питание" type="checkbox" value="натуральный корм" />натуральный корм
+        </span>
+        <p>Пол питомца</p>
+        <div><input type="radio" name="sex" value="самец" /> самец <br /> <input type="radio" name="sex"
+                value="самка" /> самка</div>
+        <p> Ваш комментарий:</p>
+        <div><textarea name="комментарий" id="comments" placeholder="Написать комментарий" cols="30"
+                rows="10"></textarea>
+        </div>
+        <p>Загрузите фото вашего питомца</p>
+        <div>
+            <input type="file" name="фото" />
+        </div>
+        <p> <button id="createCat" class="btn" type="submit">Сохранить</button> </p>
+
+    </form>
+
+    <script src="FormCats.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <style>
+        .register {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            width: 500px;
+            padding: 10px;
+            border-style: double;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 20px;
+            color: rgb(7, 7, 7);
+            box-shadow: rgb(104, 172, 204) 10px 10px 10px;
+
+
+        }
+
+        .reg_form {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: repeat(6, 1fr);
+            align-items: center;
+        }
+
+
+        input {
+            width: 93%;
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+            padding: 5px;
+            margin: 3px;
+            font-size: 15px;
+            border-radius: 5px;
+            background: rgba(56, 55, 55, 0.07);
+        }
+
+
+        .header {
+            margin: 0 1px 20px;
+            border-bottom: 2px solid;
+            padding: 5px 10px 5px 0;
+            font-size: 30px;
+            text-align: center;
+        }
+
+
+
+        .errorMessage {
+            color: red;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .message {
+            color: rgb(60, 255, 0);
+            text-align: center;
+            margin: 10px;
+        }
+
+        .button {
+            width: 500px;
+            font-size: 20px;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 20px;
+            background: rgb(193, 231, 235);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="register">
+        <h3 class="header">Форма регистрации</h3>
+        <form novalidate class="reg_form" id="reg-form">
+            <label for="name">Имя</label>
+            <input type="text" placeholder=" name" id="name" minlength=" 4" maxlength=" 10" autofocus required />
+            <label for="email">Email</label>
+            <input type="email" placeholder=" email@" id="email" required />
+            <label for="phone">Номер телефона </label>
+            <input type="tel" id="telephone" placeholder=" +7(999)999-99-99"
+                pattern="(\+7[-_()\s]+|\+7\s?[(]{0,1}[0-9]{3}[)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2})" required />
+
+            <label for="username">Имя пользователя</label>
+            <input type="text" placeholder=" username" id="username" autocomplete="on" required />
+            <label for="password">Пароль</label>
+            <input type="password" placeholder=" password*****" id="password" minlength=" 4" required />
+            <label for="password-again">Повторить пароль</label>
+            <input type="password" placeholder=" password_again*****" id="password_again" autocomplete="on" required />
+
+
+        </form>
+        <div class="errorMessage" id="errorMessage"></div>
+        <div>
+            <div class="message" id="message"></div>
+            <div>
+                <button id="createAccount" class="button" type="submit" >Регистрация</button>
+            </div>
+        </div>
+
+
+        <script src="formVALID.js"></script>
+</body>
+
+</html>
