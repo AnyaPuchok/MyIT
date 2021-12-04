@@ -1,3 +1,10 @@
+//let username = localStorage.getItem('username');
+//let score = localStorage.getItem('score');
+//let squantity = localStorage.getItem('guessedCharacterName');
+//document.querySelector('predict__name').innerHTML += username +', вы отлично справились и набрали' + score  + '<br/>
+// и отгадали' + squantity +'герое, получите предсказание от волшебной шляпы';
+
+
 document.getElementById("btn").addEventListener("click", function () {
 let quotes = [
 'Величие порождает зависть, зависть рождает зло, а ложь искры зла',
